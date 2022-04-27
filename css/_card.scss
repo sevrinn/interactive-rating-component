@@ -1,0 +1,24 @@
+h1 {
+	font-weight: $bold;
+}
+
+.container {
+	background-image: $gradient;
+	padding: 2em;
+	border-radius: 15px;
+	max-width: $mobile-max-width;
+	line-height: $line-height;
+	height: max-content;
+}
+
+p {
+	color: $light-grey;
+}
+
+// form card
+.card-btns {
+	display: flex;
+	justify-content: center;
+}
+
+//thankyou card
