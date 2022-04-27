@@ -29,6 +29,9 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .submit-btn {
@@ -41,6 +44,26 @@ p {
   text-transform: uppercase;
   font-size: 1em;
   letter-spacing: 3px;
+}
+
+.round {
+  background-color: #252d37;
+  padding: 15px;
+  margin-bottom: 2em;
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100px;
+  vertical-align: middle;
+  color: #959eac;
 }
 
 body {
