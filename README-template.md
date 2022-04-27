@@ -48,7 +48,18 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
-First I looked at the figma file and came up with an html skeleton that I thought would scale well for mobile and desktop.
+- First I looked at the figma file and came up with an html skeleton that I thought would scale well for mobile and desktop. after a refactor or two, i came up with this.
+
+- div.container (#form || #thankyou)
+  div.card-top
+
+  div.card-bottom
+
+this simple base container will be perfect for both my form and thank you components. both exhibit the pattern of a top and bottom section that have different elements in them.
+
+- next i focused on the rating form component
+  the top of rating form has: - an image <img> - a heading <h1> - a paragraph <p>
+  the bottom of rating from has: - row of numbers 1 - 5 [.rating-btn, .round, #1-5] - submit button [.submit-button]
 
 ### Built with
 
