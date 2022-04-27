@@ -13,6 +13,7 @@ h1 {
 
 p {
 	color: $light-grey;
+	font-size: 1.15em;
 }
 
 // form card
@@ -46,3 +47,16 @@ p {
 }
 
 //thankyou card
+#rating-thankyou .card-top,
+.card-bottom {
+	text-align: center;
+}
+
+#user-rating p {
+	background-color: $dark-blue;
+	color: $orange;
+	width: max-content;
+	margin: 20px auto;
+	padding: 10px 15px;
+	border-radius: 30px;
+}

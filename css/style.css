@@ -17,6 +17,7 @@ h1 {
 
 p {
   color: #959eac;
+  font-size: 1.15em;
 }
 
 .card-btns {
@@ -64,6 +65,22 @@ p {
   border-radius: 100px;
   vertical-align: middle;
   color: #959eac;
+}
+
+#rating-thankyou .card-top,
+.card-bottom {
+  text-align: center;
+}
+
+#user-rating p {
+  background-color: #252d37;
+  color: #fb7413;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 20px auto;
+  padding: 10px 15px;
+  border-radius: 30px;
 }
 
 body {
