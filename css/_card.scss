@@ -17,8 +17,19 @@ p {
 
 // form card
 .card-btns {
-	display: flex;
-	justify-content: center;
+	@include flex-center();
+}
+
+.submit-btn {
+	border: none;
+	background-color: $orange;
+	padding: 20px;
+	width: 100%;
+	border-radius: 50px;
+	color: $white;
+	text-transform: uppercase;
+	font-size: 1em;
+	letter-spacing: 3px;
 }
 
 //thankyou card
