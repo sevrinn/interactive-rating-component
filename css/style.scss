@@ -13,4 +13,5 @@ body {
 	padding: 1rem;
 	min-height: 100vh;
 	@include flex-center();
+	flex-direction: column;
 }
