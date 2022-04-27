@@ -1,5 +1,45 @@
+// Layout
+$mobile-max-width: 375px;
+$desktop-max-width: 1440px;
+
+// Colors
+// Primary
+$orange: hsl(25, 97%, 53%);
+
+// Neutral
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$med-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$dark-blue-a: hsla(213, 19%, 18%, 0.4);
 $v-dark-blue: hsl(216, 12%, 8%);
 
-/*body {
+//Gradient
+$gradient: linear-gradient($dark-blue, $dark-blue-a);
+
+//Typeography
+// Body Copy
+$main-copy: 15px;
+$line-height: 1.5rem;
+
+// Font
+$overpass: 'Overpass', sans-serif;
+// Font Weight
+
+body {
 	background-color: $v-dark-blue;
-}*/
+	color: $white;
+	font-family: $overpass;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+
+.container {
+	background-image: $gradient;
+	padding: 2em;
+	border-radius: 15px;
+	max-width: $mobile-max-width;
+	line-height: $line-height;
+}
