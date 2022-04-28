@@ -178,22 +178,23 @@ I broke down the functionality into smaller bits.
   Each btn when clicked, adds 'selected' class to classList and then turns ratingsBtns node list into an array, which we then use to iterate thru for the logic of highlighting or unhighlighting buttons depending on which rating was clicked.
 
   ```js
-    ratingBtns.forEach((item, idx) => {
-	  item.addEventListener('click', (e) => {
-		const el = e.target
-		el.classList.add('selected')
-		
-		const btnArr = Array.from(ratingBtns)
-		
-		rating = el.id
-		
-		btnArr.forEach((btn) => {
-			btn.id > el.id ? btn.classList.remove('selected')
-			: btn.classList.add('selected')
-			}
-		})
-	})
-```
+        ratingBtns.forEach((item, idx) => {
+        item.addEventListener('click', (e) => {
+        const el = e.target
+        el.classList.add('selected')
+        
+        const btnArr = Array.from(ratingBtns)
+        
+        rating = el.id
+        
+        btnArr.forEach((btn) => {
+          btn.id > el.id ? btn.classList.remove('selected')
+          : btn.classList.add('selected')
+          }
+        })
+      })
+
+  ```
 
 
 
