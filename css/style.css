@@ -73,7 +73,7 @@ p {
   color: white;
 }
 
-#rating-thankyou {
+.hide {
   display: none;
 }
 
@@ -82,7 +82,7 @@ p {
   text-align: center;
 }
 
-#user-rating p {
+#user-rating {
   background-color: #252d37;
   color: #fb7413;
   width: -webkit-max-content;

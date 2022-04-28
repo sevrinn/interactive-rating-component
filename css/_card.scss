@@ -54,15 +54,16 @@ p {
 }
 
 //thankyou card
-#rating-thankyou {
+.hide {
 	display: none;
 }
+
 #rating-thankyou .card-top,
 .card-bottom {
 	text-align: center;
 }
 
-#user-rating p {
+#user-rating {
 	background-color: $dark-blue;
 	color: $orange;
 	width: max-content;

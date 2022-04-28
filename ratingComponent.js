@@ -1,5 +1,7 @@
 
-
+const ratingForm = document.querySelector("#rating-form")
+const thankyou = document.querySelector("#rating-thankyou")
+const userRating = document.querySelector("#user-rating")
 const star1 = document.getElementById('1')
 const star2 = document.getElementById('2')
 const star3 = document.getElementById('3')
@@ -64,5 +66,10 @@ star5.addEventListener('click', (e) => {
 
 submitBtn.addEventListener('click', (e) => {
 	console.log('submitting your rating...')
+
+	ratingForm.classList.add('hide')
+	thankyou.classList.remove('hide')
+
 	console.log(rating)
+	userRating.innerHTML = `You selected ${rating} out of 5`
 })
