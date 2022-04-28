@@ -120,8 +120,6 @@ body {
 }
 
 .attribution {
-  -ms-grid-column-align: end;
-      justify-self: end;
-  margin-top: 10rem;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
