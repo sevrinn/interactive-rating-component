@@ -68,6 +68,11 @@ p {
   color: #959eac;
 }
 
+.rating-btn:hover {
+  background: #979797;
+  color: white;
+}
+
 .selected {
   background-color: #fb7413;
   color: white;

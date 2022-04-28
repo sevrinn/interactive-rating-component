@@ -49,6 +49,11 @@ p {
 	color: $light-grey;
 }
 
+.rating-btn:hover {
+	background: #979797;
+	color: $white;
+}
+
 .selected {
 	background-color: $orange; 
 	color: $white;
