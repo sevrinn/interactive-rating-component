@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/interactive-rating-component-styled-with-sass-r1EdVnDSq)
-- Live Site URL: [Add live site URL here](https://sev-rating-component.netlify.app/)
+- Solution URL: [My Solution](https://www.frontendmentor.io/solutions/interactive-rating-component-styled-with-sass-r1EdVnDSq)
+- Live Site URL: [Solution Deployed](https://sev-rating-component.netlify.app/)
 
 ## My process
 
