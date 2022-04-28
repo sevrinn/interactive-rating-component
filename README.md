@@ -54,20 +54,20 @@ This simple base container will be perfect for both my form and thank you compon
 
 Next i focused on the rating form component
 
-  the top of rating form has: 
+- the top of rating form has: 
   - an image which i wrapped in a div
   - a heading 
   - a paragraph
-the bottom of rating from has: 
+- the bottom of rating from has: 
   - an ul with 5 numbered list items
-  - submit button [.submit-button]
+  - submit button 
 
 
-- the thankyou component is similar to the for
-  top: 
+the thankyou component is similar to the form
+  - top: 
     - img (wrapped in a div)
     - rating confirmation in paragraph
-  bottom:
+  - bottom:
     - heading 
     - paragraph 
 
