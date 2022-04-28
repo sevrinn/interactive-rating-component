@@ -68,6 +68,10 @@ p {
   color: #959eac;
 }
 
+#rating-thankyou {
+  display: none;
+}
+
 #rating-thankyou .card-top,
 .card-bottom {
   text-align: center;
