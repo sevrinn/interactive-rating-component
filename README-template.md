@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![My solution demo gif](./images/demo.GIF)
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
@@ -49,6 +49,13 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ## My process
 
 - First I looked at the figma file and came up with an html skeleton that I thought would scale well for mobile and desktop. after a refactor or two, i came up with this.
+
+```html
+<div class="container">
+  <div class="card-top"></div>
+  <div class="card-bottom"></div>
+</div>
+```
 
 - div.container (#form || #thankyou)
   div.card-top
@@ -74,7 +81,7 @@ this simple base container will be perfect for both my form and thank you compon
   - paragraph
 
 Once I got the structure down (more or less. hehe) I started adding styles.
-I chose to challenge myself to learn Sass for the first time. 
+I chose to challenge myself to implement Sass for the first time. 
 
 I found a great article by Adalbert Pungu (https://www.freecodecamp.org/news/how-to-use-sass-with-css/) that you can read here. 
 The article breaks down two ways to install and configure Sass, one with node via npm and the other via Live Sass Compiler extension for VScode. 
@@ -88,7 +95,7 @@ I also imported the _variables, _mixins, and the _card. Variables and mixins are
 Everything is styled mobile first. 
 
 
-- the star image and the rating number selectors were given the same styling because their round backgrounds are the same
+- the star image and the rating number selectors were given the same base styling because their round backgrounds are the same, the ratingBtns are given extra classes for hover and active states.
 
 - _variable colors contain a combo of hsl and hsla colors
 
@@ -118,19 +125,14 @@ I broke down the functionality into smaller bits.
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS with SASS
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- vanilla JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned about Array.from() which turns a node list into an array. 
 
 To see how you can add code snippets, see below:
 

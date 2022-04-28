@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive rating component
 
-![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
+![My solution demo gif](./images/demo.GIF)
 
 ## Welcome! 👋
 
