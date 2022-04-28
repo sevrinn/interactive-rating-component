@@ -53,28 +53,30 @@ Users should be able to:
 This simple base container will be perfect for both my form and thank you components. both exhibit the pattern of a top and bottom section that have different elements in them. I can select an individual component via its id and have them share styles and layout via the .container, since they will be the same. 
 
 Next i focused on the rating form component
+
   the top of rating form has: 
-  - an image <img> which i wrapped in a div
-  - a heading <h1> 
-  - a paragraph <p>
-  the bottom of rating from has: 
+  - an image which i wrapped in a div
+  - a heading 
+  - a paragraph
+the bottom of rating from has: 
   - an ul with 5 numbered list items
   - submit button [.submit-button]
 
 
-- the thankyou component is similar to the form
+- the thankyou component is similar to the for
   top: 
-  - <img> (wrapped in a div)
-  - rating confirmation <p>
+    - img (wrapped in a div)
+    - rating confirmation in paragraph
   bottom:
-  - heading <h1>
-  - paragraph <p>
+    - heading 
+    - paragraph 
 
-  ```html
-<div class="container">
-  <div class="card-top"></div>
-  <div class="card-bottom"></div>
-</div>
+
+```html
+  <div class="container">
+    <div class="card-top"></div>
+    <div class="card-bottom"></div>
+  </div>
 ```
 
 Once I got the structure down (more or less. hehe) I started adding styles.
