@@ -5,6 +5,7 @@
 
 body {
 	background-color: $v-dark-blue;
+	height: 100vh;
 	color: $white;
 	font-family: $overpass;
 	margin: 0;
@@ -14,4 +15,9 @@ body {
 	min-height: 100vh;
 	@include flex-center();
 	flex-direction: column;
+}
+
+.attribution {
+	justify-self: end;
+	margin-top: 10rem;
 }

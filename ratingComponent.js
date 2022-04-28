@@ -1,19 +1,28 @@
 
 const ratingForm = document.querySelector("#rating-form")
-const thankyou = document.querySelector("#rating-thankyou")
-const userRating = document.querySelector("#user-rating")
+
+// ratings 1 - 5
 const star1 = document.getElementById('1')
 const star2 = document.getElementById('2')
 const star3 = document.getElementById('3')
 const star4 = document.getElementById('4')
 const star5 = document.getElementById('5')
 
+
+const thankyou = document.querySelector("#rating-thankyou")
+
+// user rating feedback
+const userRating = document.querySelector("#user-rating")
+
+//rating is initially set to zero
 let rating = 0
 
 const submitBtn = document.querySelector('.submit-btn')
 
-const orangeBackground = 'background-color: hsl(25, 97%, 53%)'
-
+/** 
+ * I know there is a better way to do this because i'm seeing a lot of replicated code.
+ * 
+ */
 star1.addEventListener('click', (e) => {
 	const el = e.target
 	el.classList.add('selected')
@@ -65,11 +74,16 @@ star5.addEventListener('click', (e) => {
 })
 
 submitBtn.addEventListener('click', (e) => {
-	console.log('submitting your rating...')
+	if (rating === 0) {
+		alert("Please rate to continue")
+	} else {
+		console.log('submitting your rating...')
 
-	ratingForm.classList.add('hide')
-	thankyou.classList.remove('hide')
+		ratingForm.classList.add('hide')
+		thankyou.classList.remove('hide')
 
-	console.log(rating)
-	userRating.innerHTML = `You selected ${rating} out of 5`
+		console.log(rating)
+		userRating.innerHTML = `You selected ${rating} out of 5`
+	}
+	
 })
