@@ -36,7 +36,7 @@ Users should be able to:
 
 ## My process
 
-- First I looked at the figma file and came up with an html skeleton that I thought would scale well for mobile and desktop (which are very similar in this case). after a refactor or two, i came up with this.
+First I looked at the figma file and came up with an html skeleton that I thought would scale well for mobile and desktop (which are very similar in this case). after a refactor or two, i came up with this.
 
 ```html
 <div class="container">
@@ -72,17 +72,10 @@ the thankyou component is similar to the form
     - paragraph 
 
 
-```html
-  <div class="container">
-    <div class="card-top"></div>
-    <div class="card-bottom"></div>
-  </div>
-```
-
 Once I got the structure down (more or less. hehe) I started adding styles.
 I chose to challenge myself to implement Sass for the first time. 
 
-I found a great article by Adalbert Pungu (https://www.freecodecamp.org/news/how-to-use-sass-with-css/) that you can read here. 
+I found a great article by Adalbert Pungu (https://www.freecodecamp.org/news/how-to-use-sass-with-css/).
 The article breaks down two ways to install and configure Sass, one with node via npm and the other via Live Sass Compiler extension for VScode. 
 I went with the latter because this is a small practice project and I'm just learning the basics. I will definitely be using the npm config for larger projects in the future. 
 
@@ -94,11 +87,11 @@ I also imported the _variables, _mixins, and the _card. Variables and mixins are
 Everything is styled mobile first. 
 
 
-- the star image and the rating number selectors were given the same base styling because their round backgrounds are the same, the ratingBtns are given extra classes for hover and active states.
+the star image and the rating number selectors were given the same base styling because their round backgrounds are the same, the ratingBtns are given extra classes for hover and active states.
 
-- _variable colors contain a combo of hsl and hsla colors
+_variable colors contain a combo of hsl and hsla colors
 
--When everthing was styled for mobile, I decided to take a break from css and work on some JS functionality. 
+When everthing was styled, I decided to take a break from css and work on some JS functionality. 
 I broke down the functionality into smaller bits.
 - rating numbers 
   - when a rating is clicked, its background is highlighted
@@ -182,7 +175,7 @@ I broke down the functionality into smaller bits.
     const ratingBtns = document.querySelectorAll('.rating-btn')
   ```
   
-  each btn when clicked, adds 'selected' class to classList and then turns ratingsBtns node list into an array, which we then use to iterate thru for the logic of highlighting or unhighlighting buttons depending on which rating was clicked.
+  Each btn when clicked, adds 'selected' class to classList and then turns ratingsBtns node list into an array, which we then use to iterate thru for the logic of highlighting or unhighlighting buttons depending on which rating was clicked.
 
   ```js
     ratingBtns.forEach((item, idx) => {
@@ -201,8 +194,8 @@ I broke down the functionality into smaller bits.
 		})
 	})
 
-})
-  ```
+  })
+```
 
 
 
@@ -221,7 +214,7 @@ I learned about Array.from() which turns a node list into an array.
 This gave me a chance to practice looping through an array with forEach to change somethings. I didnt need to use .map because I didnt need it to return anything. It just created some side effects.
 
 ```js
- Array.from( nodeList )
+  Array.from( nodeList )
 ```
 
 I got more comfortable refactoring my javascript code from an okay solution to a better one.
