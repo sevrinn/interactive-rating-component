@@ -50,6 +50,10 @@ p {
   cursor: pointer;
 }
 
+.submit-btn:hover {
+  background-color: #f6a165;
+}
+
 .round {
   background-color: #252d37;
   padding: 15px;
@@ -68,6 +72,10 @@ p {
   border-radius: 100px;
   vertical-align: middle;
   color: #959eac;
+}
+
+.rating-btn {
+  cursor: pointer;
 }
 
 .rating-btn:hover {
