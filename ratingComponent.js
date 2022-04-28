@@ -88,7 +88,8 @@ ratingBtns.forEach((item, idx) => {
 		
 		//updates rating
 		rating = el.id
-		// goes thru array of btns adding and removing classnames as necessary
+		// goes thru array of btns adding selected class to btn if id is LT id of current element or removing it
+		// if it id is GT current element id. 
 		btnArr.forEach((btn) => {
 			
 			if (btn.id > el.id) {
