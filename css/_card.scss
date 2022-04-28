@@ -22,6 +22,9 @@ p {
 .card-btns {
 	@include flex-center();
 	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+
 }
 
 .submit-btn {
