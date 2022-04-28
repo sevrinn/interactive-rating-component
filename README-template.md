@@ -58,8 +58,54 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 this simple base container will be perfect for both my form and thank you components. both exhibit the pattern of a top and bottom section that have different elements in them.
 
 - next i focused on the rating form component
-  the top of rating form has: - an image <img> - a heading <h1> - a paragraph <p>
-  the bottom of rating from has: - row of numbers 1 - 5 [.rating-btn, .round, #1-5] - submit button [.submit-button]
+  the top of rating form has: 
+  - an image <img> 
+  - a heading <h1> 
+  - a paragraph <p>
+  the bottom of rating from has: 
+  - row of numbers 1 - 5 [.rating-btn, .round, #1-5] 
+  - submit button [.submit-button]
+
+- the thankyou component was similar to the form
+  top: 
+  - img
+  - rating confirmation
+  - heading 
+  - paragraph
+
+Once I got the structure down (more or less. hehe) I started adding styles.
+I chose to challenge myself to learn Sass for the first time. 
+
+I found a great article by Adalbert Pungu (https://www.freecodecamp.org/news/how-to-use-sass-with-css/) that you can read here. 
+The article breaks down two ways to install and configure Sass, one with node via npm and the other via Live Sass Compiler extension for VScode. 
+I went with the latter because this is a small practice project and I'm just learning the basics. I will definitely be using the npm config for larger projects in the future. 
+
+It then goes on and shows you how to get the scss file to compile to the css file. First with everything in one file and then using mixins and variables via @import. 
+
+Once everything was set up, I started adding base styles to the body in the main scss file
+I also imported the _variables, _mixins, and the _card. Variables and mixins are used throughout.
+
+Everything is styled mobile first. 
+
+
+- the star image and the rating number selectors were given the same styling because their round backgrounds are the same
+
+- _variable colors contain a combo of hsl and hsla colors
+
+-When everthing was styled for mobile, I decided to take a break from css and work on some JS functionality. 
+I broke down the functionality into smaller bits.
+- rating numbers 
+  - when a rating is clicked, its background is highlighted
+  - when a rating is clicked, all ratings before it must also be highlighted
+  - when you click a rating lower than the last rating you clicked, higher ratings go back to unhighlighted
+  - when rating is clicked, a predefined variable is updated with the number that was clicked. 
+- sumbit button
+  - hides form component
+  - shows thankyou component
+  - thankyou component #user-rating p shows confirmation of rating 
+
+
+
 
 ### Built with
 
