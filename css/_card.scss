@@ -54,6 +54,11 @@ p {
 	color: $white;
 }
 
+.rating-btn:active, .submit-btn:active {
+	background: $white;
+	color: $dark-blue;
+}
+
 .selected {
 	background-color: $orange; 
 	color: $white;

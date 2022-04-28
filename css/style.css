@@ -73,6 +73,11 @@ p {
   color: white;
 }
 
+.rating-btn:active, .submit-btn:active {
+  background: white;
+  color: #252d37;
+}
+
 .selected {
   background-color: #fb7413;
   color: white;

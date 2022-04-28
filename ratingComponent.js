@@ -26,6 +26,7 @@ const submitBtn = document.querySelector('.submit-btn')
 star1.addEventListener('click', (e) => {
 	const el = e.target
 	el.classList.add('selected')
+	el.classList.remove('rating-btn:hover')
 	star2.classList.remove('selected')
 	star3.classList.remove('selected')
 	star4.classList.remove('selected')
