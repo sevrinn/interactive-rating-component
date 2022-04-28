@@ -1,94 +1,238 @@
-# Frontend Mentor - Interactive rating component
+# My Interactive Rating Component Solution
 
 ![My solution demo gif](./images/demo.GIF)
+Demo gif
+## Table of contents
 
-## Welcome! 👋
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Thanks for checking out this front-end coding challenge.
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+This is my solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). These challenges help improve coding skills by building realistic projects and giving me the opportunity to talk about my process and choices in a way that might help others but also solidfies my knowledge.
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this interactive rating component and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Select and submit a number rating
 - See the "Thank you" card state after submitting a rating
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Links
 
-## Where to find everything
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/interactive-rating-component-styled-with-sass-r1EdVnDSq)
+- Live Site URL: [Add live site URL here](https://sev-rating-component.netlify.app/)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+## My process
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- First I looked at the figma file and came up with an html skeleton that I thought would scale well for mobile and desktop (which are very similar in this case). after a refactor or two, i came up with this.
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+```html
+<div class="container">
+  <div class="card-top"></div>
+  <div class="card-bottom"></div>
+</div>
+```
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+- div.container#component
+   - div.card-top
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+   - div.card-bottom
 
-## Building your project
+This simple base container will be perfect for both my form and thank you components. both exhibit the pattern of a top and bottom section that have different elements in them. I can select an individual component via its id and have them share styles and layout via the .container, since they will be the same. 
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+Next i focused on the rating form component
+  the top of rating form has: 
+  - an image <img> which i wrapped in a div
+  - a heading <h1> 
+  - a paragraph <p>
+  the bottom of rating from has: 
+  - an ul with 5 numbered list items
+  - submit button [.submit-button]
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
 
-## Deploying your project
+- the thankyou component is similar to the form
+  top: 
+  - <img> (wrapped in a div)
+  - rating confirmation <p>
+  bottom:
+  - heading <h1>
+  - paragraph <p>
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+  ```html
+<div class="container">
+  <div class="card-top"></div>
+  <div class="card-bottom"></div>
+</div>
+```
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+Once I got the structure down (more or less. hehe) I started adding styles.
+I chose to challenge myself to implement Sass for the first time. 
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+I found a great article by Adalbert Pungu (https://www.freecodecamp.org/news/how-to-use-sass-with-css/) that you can read here. 
+The article breaks down two ways to install and configure Sass, one with node via npm and the other via Live Sass Compiler extension for VScode. 
+I went with the latter because this is a small practice project and I'm just learning the basics. I will definitely be using the npm config for larger projects in the future. 
 
-## Create a custom `README.md`
+It then goes on and shows you how to get the scss file to compile to the css file. First with everything in one file and then using mixins and variables via @import. 
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+Once everything was set up, I started adding base styles to the body in the main scss file
+I also imported the _variables, _mixins, and the _card. Variables and mixins are used throughout.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+Everything is styled mobile first. 
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
 
-## Submitting your solution
+- the star image and the rating number selectors were given the same base styling because their round backgrounds are the same, the ratingBtns are given extra classes for hover and active states.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+- _variable colors contain a combo of hsl and hsla colors
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+-When everthing was styled for mobile, I decided to take a break from css and work on some JS functionality. 
+I broke down the functionality into smaller bits.
+- rating numbers 
+  - when a rating is clicked, its background is highlighted
+  - when a rating is clicked, all ratings before it must also be highlighted
+  - when you click a rating lower than the last rating you clicked, higher ratings go back to unhighlighted
+  - when rating is clicked, a predefined variable is updated with the number that was clicked. 
+- sumbit button
+  - hides form component
+  - shows thankyou component
+  - thankyou component #user-rating p shows confirmation of rating 
 
-## Sharing your solution
+  At first, I had made the rating selection buttons divs nested in a parent div. I switched them to a be an ul and li elements. I fixed it to be a little more semantic. 
 
-There are multiple places you can share your solution:
+  ```js
+    const star1 = document.getElementById('1')
+    const star2 = document.getElementById('2')
+    const star3 = document.getElementById('3')
+    const star4 = document.getElementById('4')
+    const star5 = document.getElementById('5')
+  ```
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+  I also had first grabbed each button individually with getElementById and added eventListeners to each of those also individually. Which ended being A LOT of extra code. 
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+  ```js
+    star1.addEventListener('click', (e) => {
+	    const el = e.target
+      el.classList.add('selected')
+      el.classList.remove('rating-btn:hover')
+      star2.classList.remove('selected')
+      star3.classList.remove('selected')
+      star4.classList.remove('selected')
+      star5.classList.remove('selected')
+      rating = 1
+    })
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+    star2.addEventListener('click', (e) => {
+      const el = e.target
+      el.classList.add('selected')
+      star1.classList.add('selected')
+      star3.classList.remove('selected')
+      star4.classList.remove('selected')
+      star5.classList.remove('selected')
+      rating = 2
+    })
 
-## Got feedback for us?
+    star3.addEventListener('click', (e) => {
+      const el = e.target
+      el.classList.add('selected')
+      star1.classList.add('selected')
+      star2.classList.add('selected')
+      star4.classList.remove('selected')
+      star5.classList.remove('selected')
+      rating = 3
+    })
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+    star4.addEventListener('click', (e) => {
+      const el = e.target
+      el.classList.add('selected')
+      star1.classList.add('selected')
+      star2.classList.add('selected')
+      star3.classList.add('selected')
+      star5.classList.remove('selected')
+      rating = 4
+    })
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+    star5.addEventListener('click', (e) => {
+      const el = e.target
+      el.classList.add('selected')
+      star1.classList.add('selected')
+      star2.classList.add('selected')
+      star3.classList.add('selected')
+      star4.classList.add('selected')
+      rating = 5
+    })  
+  ```
 
-**Have fun building!** 🚀
+
+  So on the refactor, I grabbed the ratingsBtns all at once with querySelectorAll and ran a forEach on them to add the eventListeners to each one. 
+
+  ```js
+    const ratingBtns = document.querySelectorAll('.rating-btn')
+  ```
+  
+  each btn when clicked, adds 'selected' class to classList and then turns ratingsBtns node list into an array, which we then use to iterate thru for the logic of highlighting or unhighlighting buttons depending on which rating was clicked.
+
+  ```js
+    ratingBtns.forEach((item, idx) => {
+	  item.addEventListener('click', (e) => {
+		const el = e.target
+		el.classList.add('selected')
+		
+		const btnArr = Array.from(ratingBtns)
+		
+		rating = el.id
+		
+		btnArr.forEach((btn) => {
+			btn.id > el.id ? btn.classList.remove('selected')
+			: btn.classList.add('selected')
+			}
+		})
+	})
+
+})
+  ```
+
+
+
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS with SASS
+- Flexbox
+- Mobile-first workflow
+- vanilla JavaScript
+
+### What I learned
+
+I learned about Array.from() which turns a node list into an array. 
+This gave me a chance to practice looping through an array with forEach to change somethings. I didnt need to use .map because I didnt need it to return anything. It just created some side effects.
+
+```js
+ Array.from( nodeList )
+```
+
+I got more comfortable refactoring my javascript code from an okay solution to a better one.
+
+
+### Continued development
+
+I think down the line, when building a full project, i'd like to use this in a react project or something similar.
+
+
+## Author
+
+- Website - [Sevrinn Welker](https://sevrinn.dev/)
+- Frontend Mentor - [@sevrinn](https://www.frontendmentor.io/profile/sevrinn)
+- Twitter - [@sev_welker](https://www.twitter.com/sev_welker)
+
