@@ -1,84 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
 
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- displays site properly based on user's device -->
 
-		<link rel="stylesheet" href="css\style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap"
-			rel="stylesheet"
-		/>
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-		<title>Frontend Mentor | Interactive rating component</title>
-	</head>
-	<body>
-		<!-- Rating state start -->
+	<link rel="stylesheet" href="css\style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;900&display=swap" rel="stylesheet" />
 
-		<div class="container" id="rating-form">
-			<div class="card-top">
-				<div class="round">
-					<img src="images/icon-star.svg" alt="" />
-				</div>
-				<h1>How did we do?</h1>
-				<p>
-					Please let us know how we did with your support request. All feedback
-					is appreciated to help us improve our offering!
-				</p>
+	<title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+	<!-- Rating state start -->
+
+	<div class="container" id="rating-form">
+		<div class="card-top">
+			<div class="round">
+				<img src="images/icon-star.svg" alt="" />
 			</div>
-			<div class="card-bottom">
-				<div class="card-btns">
-					<div class="rating-btn round" id="1">1</div>
-					<div class="rating-btn round" id="2">2</div>
-					<div class="rating-btn round" id="3">3</div>
-					<div class="rating-btn round" id="4">4</div>
-					<div class="rating-btn round" id="5">5</div>
-				</div>
-				<button class="submit-btn">Submit</button>
+			<h1>How did we do?</h1>
+			<p>
+				Please let us know how we did with your support request. All feedback
+				is appreciated to help us improve our offering!
+			</p>
+		</div>
+		<div class="card-bottom">
+			<div class="card-btns">
+				<div class="rating-btn round" id="1">1</div>
+				<div class="rating-btn round" id="2">2</div>
+				<div class="rating-btn round" id="3">3</div>
+				<div class="rating-btn round" id="4">4</div>
+				<div class="rating-btn round" id="5">5</div>
+			</div>
+			<button class="submit-btn">Submit</button>
+		</div>
+	</div>
+
+	<!-- Rating state end -->
+
+	<!-- Thank you state start -->
+	<div class="container" id="rating-thankyou">
+		<div class="card-top">
+			<img src="images/illustration-thank-you.svg"
+				alt="an illustration of a smart phone with a credit card and a reciept whirling around it" />
+			<!-- Add rating here -->
+			<div id="user-rating">
+				<p>You selected 4 out of 5</p>
 			</div>
 		</div>
-
-		<!-- Rating state end -->
-
-		<!-- Thank you state start -->
-		<div class="container" id="rating-thankyou">
-			<div class="card-top">
-				<img
-					src="images/illustration-thank-you.svg"
-					alt="an illustration of a smart phone with a credit card and a reciept whirling around it"
-				/>
-				<!-- Add rating here -->
-				<div id="user-rating">
-					<p>You selected 4 out of 5</p>
-				</div>
-			</div>
-			<div class="card-bottom">
-				<h1>Thank You!</h1>
-				<p>
-					We appreciate you taking the time to give a rating. If you ever need
-					more support, don’t hesitate to get in touch!
-				</p>
-			</div>
+		<div class="card-bottom">
+			<h1>Thank You!</h1>
+			<p>
+				We appreciate you taking the time to give a rating. If you ever need
+				more support, don’t hesitate to get in touch!
+			</p>
 		</div>
+	</div>
 
-		<!-- Thank you state end -->
+	<!-- Thank you state end -->
 
-		<div class="attribution">
-			Challenge by
-			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-				>Frontend Mentor</a
-			>. Coded by <a href="#">Your Name Here</a>.
-		</div>
-		<script src="ratingComponent.js"></script>
-	</body>
+	<div class="attribution">
+		Challenge by
+		<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your
+			Name Here</a>.
+	</div>
+	<script src="ratingComponent.js"></script>
+</body>
+
 </html>

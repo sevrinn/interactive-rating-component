@@ -47,6 +47,11 @@ p {
 	color: $light-grey;
 }
 
+.selected {
+	background-color: $orange; 
+	color: $white;
+}
+
 //thankyou card
 #rating-thankyou {
 	display: none;
