@@ -193,8 +193,6 @@ I broke down the functionality into smaller bits.
 			}
 		})
 	})
-
-  })
 ```
 
 
