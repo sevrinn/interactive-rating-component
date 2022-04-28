@@ -104,6 +104,14 @@ I broke down the functionality into smaller bits.
   - shows thankyou component
   - thankyou component #user-rating p shows confirmation of rating 
 
+  At first, I had made the rating selection buttons divs nested in a parent div. I switched them to a be an ul and li elements. I fixed it to be a little more semantic. 
+
+  I also had first grabbed each button individually with getElementById and added eventListeners to each of those also individually. Which ended being A LOT of extra code. 
+
+  So on the refactor, I grabbed the ratingsBtns all at once with querySelectorAll and ran a forEach on them to add the eventListeners to each one. 
+  
+  each btn when clicked, adds 'selected' class to classList and then turns ratingsBtns node list into an array, which we then use to iterate thru for the logic of highlighting or unhighlighting buttons depending on which rating was clicked.
+
 
 
 
